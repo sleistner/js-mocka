@@ -6,7 +6,7 @@
 */
 JSMocka.Expectation = function(object, method) {
 
-	var original = '__restorable__' + method,
+	var original = null,
 		parametersMatcher = new JSMocka.Matcher.ParametersMatcher([new JSMocka.Matcher.AnyParametersMatcher()]),
 		cardinalityMatcher = new JSMocka.Matcher.ExactCardinalityMatcher(1),
 		correctCardinality,
@@ -40,7 +40,7 @@ JSMocka.Expectation = function(object, method) {
    	*/
 	this.apply = function() {
 		if (!patched) {
-			object[original] = object[method];
+			original = object[method];
 			object[method] = call;
 			patched = true;
 		}
@@ -53,8 +53,8 @@ JSMocka.Expectation = function(object, method) {
    	*/
     this.restore = function() {
         if (patched) {
-            object[method] = object[original];
-            delete object[original];
+            object[method] = original;
+            original = null;
         }
     };
 
@@ -271,12 +271,12 @@ JSMocka.Expectation = function(object, method) {
 JSMocka.Expectation.onStubbing = function(object, method) {
     if (JSMocka.Configuration.shouldPrevent('StubbingNonExistentMethod', object)) {
         if (!(method in object)) {
-            throw new Error("JSMocka::Stubbing non existent method: " + method);
+            throw new Error('JSMocka::Error.Stubbing non existent method: ' + method);
         }
     }
     if (JSMocka.Configuration.shouldPrevent('StubbingNonPublicMethod', object)) {
         if ((/^_/).test(method)) {
-            throw new Error("JSMocka::Stubbing non public method: " + method);
+            throw new Error('JSMocka::Expectation.Stubbing non public method: ' + method);
         }
     }
 };

@@ -56,7 +56,7 @@ JSMocka.extend((function () {
 	            return object + '';
 	        }
 	        if (JSMocka.isArray(object)) {
-	            return '[' + JSMocka.collect(object, inspect).join(', ') + ']';
+	            return '[' + JSMocka.collect(object, JSMocka.inspect).join(', ') + ']';
 	        }
 			if (JSMocka.isObject(object)) {
 				return '{ ' + JSMocka.collect(object, function(value, key) { 
