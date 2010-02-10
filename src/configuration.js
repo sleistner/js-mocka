@@ -1,8 +1,8 @@
 (function () {
     var FLAGS = { Prevent: 0, Allow: 1, Warn: 2 },
-        DEFAULTS = { StubbingNonExistentMethod: FLAGS.Allow, StubbingNonPublicMethod: FLAGS.Prevent },
-        configurations = [],
-        global = {};
+    DEFAULTS = { StubbingNonExistentMethod: FLAGS.Allow, StubbingNonPublicMethod: FLAGS.Prevent },
+    configurations = [],
+    global = {};
 
     function get(rule, object) {
         var configuration;
@@ -25,10 +25,10 @@
         }
     }
 
-	/**
-	* @namespace
-	*/
-	JSMocka.Configuration = {
+    /**
+    * @namespace
+    */
+    JSMocka.Configuration = {
         allow: function(actions, object) {
             set(actions, object, FLAGS.Allow);
         },
@@ -41,19 +41,19 @@
             set(actions, object, FLAGS.Warn);
         },
 
-		/** @inner */
+        /** @inner */
         shouldAllow: function(rule, object) {
             return get(rule, object) === FLAGS.Allow;
         },
 
-		/** @inner */
+        /** @inner */
         shouldPrevent: function(rule, object) {
             return get(rule, object) === FLAGS.Prevent;
         },
 
-		/** @inner */
+        /** @inner */
         shouldWarn: function(rule, object) {
             return get(rule, object) === FLAGS.Warn;
         }
-	};
+    };
 })();

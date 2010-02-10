@@ -1,8 +1,8 @@
 /**
 * Expectation
 * @constructor
-* @param object {object} the object to define an expectation on
-* @param method {string} the expected method
+* @param object {Object} the object to define an expectation on
+* @param method {String} the expected method
 */
 JSMocka.Expectation = function(object, method) {
 
