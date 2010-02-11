@@ -23,6 +23,20 @@
             return mocked;
         };
     }
+    
+    /** @inner */
+    function onStubbing(object, method) {
+    	if (JSMocka.Configuration.shouldPrevent('StubbingNonExistentMethod', object)) {
+    		if (!(method in object)) {
+    			throw new Error('JSMocka::Expectation.Stubbing non existent method: ' + method);
+    		}
+    	}
+    	if (JSMocka.Configuration.shouldPrevent('StubbingNonPublicMethod', object)) {
+    		if ((/^_/).test(method)) {
+    			throw new Error('JSMocka::Expectation.Stubbing non public method: ' + method);
+    		}
+    	}
+    }
 
     /** @inner */
     var expectations = [];
@@ -52,7 +66,7 @@
         */
         this.expects = function(method) {
             if (JSMocka.isString(method)) {
-                JSMocka.Expectation.onStubbing(object, method);
+                onStubbing(object, method);
                 var expectation  = new JSMocka.Expectation(object, method);
                 expectation.apply();
                 expectations.push(expectation);
