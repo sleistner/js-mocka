@@ -1,0 +1,1035 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		
+		<title>JsDoc Reference - JSMocka.Matcher</title>
+
+		<style type="text/css">
+			/* default.css */
+body
+{
+	font: 12px "Lucida Grande", Tahoma, Arial, Helvetica, sans-serif;
+	width: 800px;
+}
+
+.header
+{
+	clear: both;
+	background-color: #ccc;
+	padding: 8px;
+}
+
+h1
+{
+	font-size: 150%;
+	font-weight: bold;
+	padding: 0;
+	margin: 1em 0 0 .3em;
+}
+
+hr
+{
+	border: none 0;
+	border-top: 1px solid #7F8FB1;
+	height: 1px;
+}
+
+pre.code
+{
+	display: block;
+	padding: 8px;
+	border: 1px dashed #ccc;
+}
+
+#index
+{
+	margin-top: 24px;
+	float: left;
+	width: 160px;
+	position: absolute;
+	left: 8px;
+	background-color: #F3F3F3;
+	padding: 8px;
+}
+
+#content
+{
+	margin-left: 190px;
+	width: 600px;
+}
+
+.classList
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 0 8px;
+	font-family: arial, sans-serif;
+	font-size: 1em;
+	overflow: auto;
+}
+
+.classList li
+{
+	padding: 0;
+	margin: 0 0 8px 0;
+}
+
+.summaryTable { width: 100%; }
+
+h1.classTitle
+{
+	font-size:170%;
+	line-height:130%;
+}
+
+h2 { font-size: 110%; }
+caption, div.sectionTitle
+{
+	background-color: #7F8FB1;
+	color: #fff;
+	font-size:130%;
+	text-align: left;
+	padding: 2px 6px 2px 6px;
+	border: 1px #7F8FB1 solid;
+}
+
+div.sectionTitle { margin-bottom: 8px; }
+.summaryTable thead { display: none; }
+
+.summaryTable td
+{
+	vertical-align: top;
+	padding: 4px;
+	border-bottom: 1px #7F8FB1 solid;
+	border-right: 1px #7F8FB1 solid;
+}
+
+/*col#summaryAttributes {}*/
+.summaryTable td.attributes
+{
+	border-left: 1px #7F8FB1 solid;
+	width: 140px;
+	text-align: right;
+}
+
+td.attributes, .fixedFont
+{
+	line-height: 15px;
+	color: #002EBE;
+	font-family: "Courier New",Courier,monospace;
+	font-size: 13px;
+}
+
+.summaryTable td.nameDescription
+{
+	text-align: left;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+.summaryTable td.nameDescription, .description
+{
+	line-height: 15px;
+	padding: 4px;
+	padding-left: 4px;
+}
+
+.summaryTable { margin-bottom: 8px; }
+
+ul.inheritsList
+{
+	list-style: square;
+	margin-left: 20px;
+	padding-left: 0;
+}
+
+.detailList {
+	margin-left: 20px; 
+	line-height: 15px;
+}
+.detailList dt { margin-left: 20px; }
+
+.detailList .heading
+{
+	font-weight: bold;
+	padding-bottom: 6px;
+	margin-left: 0;
+}
+
+.light, td.attributes, .light a:link, .light a:visited
+{
+	color: #777;
+	font-style: italic;
+}
+
+.fineprint
+{
+	text-align: right;
+	font-size: 10px;
+}
+		</style>
+	</head>
+
+	<body>
+<!-- ============================== header ================================= -->	
+		<!-- begin static/header.html -->
+		<div id="header">
+</div>
+		<!-- end static/header.html -->
+
+<!-- ============================== classes index ============================ -->
+		<div id="index">
+			<!-- begin publish.classesIndex -->
+			<div align="center"><a href="../index.html">Class Index</a>
+| <a href="../files.html">File Index</a></div>
+<hr />
+<h2>Classes</h2>
+<ul class="classList">
+	
+	<li><i><a href="../symbols/_global_.html">_global_</a></i></li>
+	
+	<li><a href="../symbols/JSMocka.html">JSMocka</a></li>
+	
+	<li><a href="../symbols/JSMocka.Configuration.html">JSMocka.Configuration</a></li>
+	
+	<li><a href="../symbols/JSMocka.Expectation.html">JSMocka.Expectation</a></li>
+	
+	<li><a href="../symbols/JSMocka.Integration.html">JSMocka.Integration</a></li>
+	
+	<li><a href="../symbols/JSMocka.Matcher.html">JSMocka.Matcher</a></li>
+	
+</ul>
+<hr />
+			<!-- end publish.classesIndex -->
+		</div>
+		
+		<div id="content">
+<!-- ============================== class title ============================ -->
+			<h1 class="classTitle">
+				
+				Namespace JSMocka.Matcher
+			</h1>
+
+<!-- ============================== class summary ========================== -->			
+			<p class="description">
+				
+			
+				
+				
+				
+					<br /><i>Defined in: </i> <a href="../symbols/src/_Users_sleistner_Projects_js-mocka_build_js-mocka.js.html">js-mocka.js</a>.
+				
+			</p>
+
+<!-- ============================== constructor summary ==================== -->			
+			
+			<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class JSMocka.Matcher.">
+				<caption>Namespace Summary</caption>
+				<thead>
+					<tr>
+						<th scope="col">Constructor Attributes</th>
+						<th scope="col">Constructor Name and Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="attributes">&nbsp;</td>
+						<td class="nameDescription" >
+							<div class="fixedFont">
+								<b><a href="../symbols/JSMocka.Matcher.html">JSMocka.Matcher</a></b>
+							</div>
+							<div class="description">If you integrate JSMocka into a test framework e.g.</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+
+<!-- ============================== properties summary ===================== -->
+			
+
+<!-- ============================== methods summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the methods documented in the class JSMocka.Matcher.">
+					<caption>Method Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Method Attributes</th>
+							<th scope="col">Method Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">JSMocka.Matcher.<b><a href="../symbols/JSMocka.Matcher.html#.AllOf">AllOf</a></b>(a)
+								</div>
+								<div class="description">Parameter matcher that matches any parameters, even none at all.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">JSMocka.Matcher.<b><a href="../symbols/JSMocka.Matcher.html#.AnyOf">AnyOf</a></b>(a)
+								</div>
+								<div class="description">Parameter matcher that matches any parameters, even none at all.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">JSMocka.Matcher.<b><a href="../symbols/JSMocka.Matcher.html#.AnyParameter">AnyParameter</a></b>()
+								</div>
+								<div class="description">Parameter matcher that matches any one parameter.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">JSMocka.Matcher.<b><a href="../symbols/JSMocka.Matcher.html#.AnyParameters">AnyParameters</a></b>()
+								</div>
+								<div class="description">Parameter matcher that matches any parameters, even none at all.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">JSMocka.Matcher.<b><a href="../symbols/JSMocka.Matcher.html#.Anything">Anything</a></b>()
+								</div>
+								<div class="description">Parameter matcher that matches any one parameter.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">JSMocka.Matcher.<b><a href="../symbols/JSMocka.Matcher.html#.Exactly">Exactly</a></b>(arg)
+								</div>
+								<div class="description">Parameter matcher that matches one exactly specified parameter.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">JSMocka.Matcher.<b><a href="../symbols/JSMocka.Matcher.html#.Having">Having</a></b>(hash)
+								</div>
+								<div class="description">Parameter matcher that matches a hash parameter having the specified keys and
+values.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">JSMocka.Matcher.<b><a href="../symbols/JSMocka.Matcher.html#.HavingKey">HavingKey</a></b>(key)
+								</div>
+								<div class="description">Parameter matcher that matches a hash parameter having the specified key.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">JSMocka.Matcher.<b><a href="../symbols/JSMocka.Matcher.html#.HavingValue">HavingValue</a></b>(value)
+								</div>
+								<div class="description">Parameter matcher that matches a hash parameter having the specified value.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">JSMocka.Matcher.<b><a href="../symbols/JSMocka.Matcher.html#.Includes">Includes</a></b>(matcher)
+								</div>
+								<div class="description">Parameter matcher that matches the elements of an array parameter against
+another parameter matcher.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">JSMocka.Matcher.<b><a href="../symbols/JSMocka.Matcher.html#.InstanceOf">InstanceOf</a></b>(clazz)
+								</div>
+								<div class="description">Parameter matcher that matches any parameter that is an instance of class
+clazz.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">JSMocka.Matcher.<b><a href="../symbols/JSMocka.Matcher.html#.Not">Not</a></b>(matcher)
+								</div>
+								<div class="description">Parameter matcher that matches if the child parameter matcher doesn't match.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">JSMocka.Matcher.<b><a href="../symbols/JSMocka.Matcher.html#.Nothing">Nothing</a></b>()
+								</div>
+								<div class="description">Parameter matcher that matches if no parameters are given.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">JSMocka.Matcher.<b><a href="../symbols/JSMocka.Matcher.html#.RespondsWith">RespondsWith</a></b>(method, returnValue)
+								</div>
+								<div class="description">Parameter matcher that matches an object parameter that responds to method,
+optionally returing return.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">JSMocka.Matcher.<b><a href="../symbols/JSMocka.Matcher.html#.SomethingLike">SomethingLike</a></b>(expression)
+								</div>
+								<div class="description">Parameter matcher that matches a string parameter against a specified
+regular expression.</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+<!-- ============================== events summary ======================== -->
+			
+
+<!-- ============================== constructor details ==================== -->		
+			
+			<div class="details"><a name="constructor"> </a>
+				<div class="sectionTitle">
+					Namespace Detail
+				</div>
+				
+				<div class="fixedFont">
+						<b>JSMocka.Matcher</b>
+				</div>
+				
+				<div class="description">
+					If you integrate JSMocka into a test framework e.g. Screw, every matcher
+is automaticaly available without namespacing it.
+					
+				</div>
+				
+				
+				
+				<pre class="code">"JSMocka.Matcher.Nothing" is aliased to "Nothing"</pre>
+				
+				
+				
+				
+					
+					
+					
+					
+					
+					
+					
+
+			</div>
+			
+
+<!-- ============================== field details ========================== -->		
+			
+
+<!-- ============================== method details ========================= -->		
+			
+				<div class="sectionTitle">
+					Method Detail
+				</div>
+				
+					<a name=".AllOf"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">JSMocka.Matcher.</span><b>AllOf</b>(a)
+					
+					</div>
+					<div class="description">
+						Parameter matcher that matches any parameters, even none at all.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{*}</span> <b>a</b>
+									
+								</dt>
+								<dd>variable argument list of expected arguments</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".AnyOf"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">JSMocka.Matcher.</span><b>AnyOf</b>(a)
+					
+					</div>
+					<div class="description">
+						Parameter matcher that matches any parameters, even none at all.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{*}</span> <b>a</b>
+									
+								</dt>
+								<dd>variable argument list of expected arguments</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".AnyParameter"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">JSMocka.Matcher.</span><b>AnyParameter</b>()
+					
+					</div>
+					<div class="description">
+						Parameter matcher that matches any one parameter. Alias for Anything().
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".AnyParameters"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">JSMocka.Matcher.</span><b>AnyParameters</b>()
+					
+					</div>
+					<div class="description">
+						Parameter matcher that matches any parameters, even none at all.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".Anything"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">JSMocka.Matcher.</span><b>Anything</b>()
+					
+					</div>
+					<div class="description">
+						Parameter matcher that matches any one parameter. Alias for AnyParameter().
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".Exactly"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">JSMocka.Matcher.</span><b>Exactly</b>(arg)
+					
+					</div>
+					<div class="description">
+						Parameter matcher that matches one exactly specified parameter.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>arg</b>
+									
+								</dt>
+								<dd>{*} the expected argument</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".Having"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">JSMocka.Matcher.</span><b>Having</b>(hash)
+					
+					</div>
+					<div class="description">
+						Parameter matcher that matches a hash parameter having the specified keys and
+values.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var o = {};
+JSMocka.mock(o, 'foo').withArgs(JSMocka.Matcher.Having({ a: 1 }));
+a.foo({ a: 1 }); // succeeds
+a.foo({ a: 1, b: 2 }); // succeeds
+a.foo({ b: 2 }); // fails</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>hash</b>
+									
+								</dt>
+								<dd>{object} the expected hash object</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".HavingKey"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">JSMocka.Matcher.</span><b>HavingKey</b>(key)
+					
+					</div>
+					<div class="description">
+						Parameter matcher that matches a hash parameter having the specified key.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var o = {};
+JSMocka.mock(o, 'foo').withArgs(JSMocka.Matcher.HavingKey('a'));
+a.foo({ a: 1 }); // succeeds
+a.foo({ a: 1, b: 2 }); // succeeds
+a.foo({ b: 2 }); // fails</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>key</b>
+									
+								</dt>
+								<dd>{string} the expected key</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".HavingValue"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">JSMocka.Matcher.</span><b>HavingValue</b>(value)
+					
+					</div>
+					<div class="description">
+						Parameter matcher that matches a hash parameter having the specified value.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var o = {};
+JSMocka.mock(o, 'foo').withArgs(JSMocka.Matcher.HavingValue(1));
+a.foo({ a: 1 }); // succeeds
+a.foo({ a: 1, b: 2 }); // succeeds
+a.foo({ b: 2 }); // fails</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>value</b>
+									
+								</dt>
+								<dd>{*} the expected value</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".Includes"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">JSMocka.Matcher.</span><b>Includes</b>(matcher)
+					
+					</div>
+					<div class="description">
+						Parameter matcher that matches the elements of an array parameter against
+another parameter matcher.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var o = {};
+JSMocka.mock(o, 'foo').withArgs(JSMocka.Matcher.Includes(1));
+a.foo([1]); // succeeds
+a.foo([1, 2, 3]); // succeeds
+a.foo([2, 3]); // fails</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>matcher</b>
+									
+								</dt>
+								<dd>{*} the expected value</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".InstanceOf"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">JSMocka.Matcher.</span><b>InstanceOf</b>(clazz)
+					
+					</div>
+					<div class="description">
+						Parameter matcher that matches any parameter that is an instance of class
+clazz.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>clazz</b>
+									
+								</dt>
+								<dd>{Function} the expected class</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".Not"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">JSMocka.Matcher.</span><b>Not</b>(matcher)
+					
+					</div>
+					<div class="description">
+						Parameter matcher that matches if the child parameter matcher doesn't match.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>matcher</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".Nothing"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">JSMocka.Matcher.</span><b>Nothing</b>()
+					
+					</div>
+					<div class="description">
+						Parameter matcher that matches if no parameters are given.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".RespondsWith"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">JSMocka.Matcher.</span><b>RespondsWith</b>(method, returnValue)
+					
+					</div>
+					<div class="description">
+						Parameter matcher that matches an object parameter that responds to method,
+optionally returing return.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var o = {};
+JSMocka.mock(o, 'foo').withArgs(JSMocka.Matcher.RespondsWith('bar'));
+a.foo({ bar: function() { return 1; } }); // succeeds
+a.foo({}); // fails
+
+var o = {};
+JSMocka.mock(o, 'foo').withArgs(JSMocka.Matcher.RespondsWith('bar', 1));
+a.foo({ bar: function() { return 1; } }); // succeeds
+a.foo({ bar: function() { return 2; } }); // fails
+a.foo({}); // fails</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>method</b>
+									
+								</dt>
+								<dd>{string} the method the arguments should respond to</dd>
+							
+								<dt>
+									<b>returnValue</b>
+									
+								</dt>
+								<dd>{*} [returnValue = null] optionally returing value</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".SomethingLike"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">JSMocka.Matcher.</span><b>SomethingLike</b>(expression)
+					
+					</div>
+					<div class="description">
+						Parameter matcher that matches a string parameter against a specified
+regular expression.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var o = {};
+JSMocka.mock(o, 'foo').withArgs(JSMocka.Matcher.SomethingLike(/hello/));
+a.foo('hello world'); // succeeds
+a.foo('good bye world'); // fails</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>expression</b>
+									
+								</dt>
+								<dd>{RegExp} the regular expression to match against</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					
+				
+			
+			
+<!-- ============================== event details ========================= -->		
+			
+			
+			<hr />
+		</div>
+
+		
+<!-- ============================== footer ================================= -->
+		<div class="fineprint" style="clear:both">
+			
+			Documentation generated by <a href="http://www.jsdoctoolkit.org/" target="_blank">JsDoc Toolkit</a> 2.1.0 on Fri Feb 12 2010 13:14:58 GMT+0100 (CET)
+		</div>
+	</body>
+</html>

@@ -23,19 +23,19 @@
             return mocked;
         };
     }
-    
+
     /** @inner */
     function onStubbing(object, method) {
-    	if (JSMocka.Configuration.shouldPrevent('StubbingNonExistentMethod', object)) {
-    		if (!(method in object)) {
-    			throw new Error('JSMocka::Expectation.Stubbing non existent method: ' + method);
-    		}
-    	}
-    	if (JSMocka.Configuration.shouldPrevent('StubbingNonPublicMethod', object)) {
-    		if ((/^_/).test(method)) {
-    			throw new Error('JSMocka::Expectation.Stubbing non public method: ' + method);
-    		}
-    	}
+        if (JSMocka.Configuration.shouldPrevent('StubbingNonExistentMethod', object)) {
+            if (!(method in object)) {
+                throw new Error('JSMocka::Expectation.Stubbing non existent method: ' + method);
+            }
+        }
+        if (JSMocka.Configuration.shouldPrevent('StubbingNonPublicMethod', object)) {
+            if ((/^_/).test(method)) {
+                throw new Error('JSMocka::Expectation.Stubbing non public method: ' + method);
+            }
+        }
     }
 
     /** @inner */
@@ -146,7 +146,7 @@
     * @example
     * JSMocka.stub({}, 'foo');
     * @return {JSMocka}
-    */	
+    */
     JSMocka.stub = mockify('stubs');
 
     /** @inner */

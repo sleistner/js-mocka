@@ -1,7 +1,7 @@
 /**
 * @namespace
 * @description
-* If you integrate JSMocka into a test framework e.g. Screw, every matcher 
+* If you integrate JSMocka into a test framework e.g. Screw, every matcher
 * is automaticaly available without namespacing it.
 * @example
 * "JSMocka.Matcher.Nothing" is aliased to "Nothing"
@@ -153,7 +153,7 @@ JSMocka.Matcher = {
     * JSMocka.mock(o, 'foo').withArgs(JSMocka.Matcher.RespondsWith('bar'));
     * a.foo({ bar: function() { return 1; } }); // succeeds
     * a.foo({}); // fails
-    * 
+    *
     * var o = {};
     * JSMocka.mock(o, 'foo').withArgs(JSMocka.Matcher.RespondsWith('bar', 1));
     * a.foo({ bar: function() { return 1; } }); // succeeds

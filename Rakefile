@@ -4,16 +4,17 @@ task :default => ['jsmocka:test']
 
 namespace :jsmocka do
 
-  NAME = 'jsmocka'
+  NAME = 'js-mocka'
   BASE_DIR = File.expand_path(File.dirname(__FILE__))
   SUPPORT_DIR = File.join(BASE_DIR, 'support')
   JS_DOC_DIR = File.join(SUPPORT_DIR, 'jsdoc-toolkit')
-  BUILD_DIR = File.join(BASE_DIR, 'dist')
+  BUILD_DIR = File.join(BASE_DIR, 'build')
   DIST_FILE = File.join(BUILD_DIR, "#{NAME}.js")
   DIST_FILE_PACKED = File.join(BUILD_DIR, "#{NAME}-minified.js")
   DOC_DIR = File.join(BUILD_DIR, 'doc')
+  SPEC_DIR = File.join(BASE_DIR, 'spec')
   SRC_FILES = %w(
-    jsmocka
+    js-mocka
     base
     configuration
     matcher
@@ -22,8 +23,13 @@ namespace :jsmocka do
   ).map{ |file| File.join(BASE_DIR, 'src', "#{file}.js") }
 
   desc 'Performs the build'
-  task :build => ['jsmocka:test', 'jsmocka:doc'] do
+  task :build => ['jsmocka:test', 'jsmocka:doc', 'jsmocka:compress'] do
     STDOUT.puts 'Build complete.'
+  end
+
+  desc 'Generates files for distribution'
+  task :dist => ['jsmocka:build'] do
+
   end
 
   desc "Remove build files and directories"
@@ -32,12 +38,12 @@ namespace :jsmocka do
   end
 
   desc "Concatenate all src files into a single file"
-  task :concatenate => ['jsmocka:clean'] do
+  task :concatenate do
     execute("Create dir #{BUILD_DIR}") { FileUtils.mkdir_p(BUILD_DIR) }
-    execute("Create distfile #{DIST_FILE}.") do
+    execute("Create #{DIST_FILE}.") do
       File.open(DIST_FILE, 'w') do |dist|
         SRC_FILES.each do |file|
-          execute("Append #{file} to #{DIST_FILE}.") { dist.write File.read(file) }
+          execute("Append #{file} to #{DIST_FILE}") { dist.write File.read(file) }
         end
       end
     end
@@ -52,7 +58,11 @@ namespace :jsmocka do
 
   desc 'Run the test suite using Rhino'
   task :test => ['jsmocka:concatenate'] do
-
+    Dir.chdir(SPEC_DIR) do
+      execute("Running specs") do
+        java File.join(SUPPORT_DIR, 'js.jar'), File.join(SPEC_DIR, 'runner.js')
+      end
+    end
   end
 
   desc 'Generate API documentation'
