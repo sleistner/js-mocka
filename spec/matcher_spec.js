@@ -6,7 +6,7 @@ Screw.Unit(function () {
             control.expects('foo').not();
         });
 
-        it('should should match any parameters by default', function() {
+        it('should match any parameters by default', function() {
             control.expects('foo');
             object.foo('a', 'b', 'c');
         });
@@ -105,7 +105,7 @@ Screw.Unit(function () {
         describe('#InstanceOf', function() {
             it('should match instance of parameter', function() {
                 control.expects('foo').withArgs(InstanceOf(Array));
-                object.foo([1]);	
+                object.foo([1]);
             });
 
             it('should not match given unexpected argument', function() {
@@ -153,7 +153,7 @@ Screw.Unit(function () {
         describe('#SomethingLike', function() {
             it('should match regexp parameter', function() {
                 control.expects('foo').withArgs(SomethingLike(/hello/));
-                object.foo('hello world');	
+                object.foo('hello world');
             });
 
             it('should not match given unexpected argument', function() {
