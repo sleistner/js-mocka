@@ -48,6 +48,10 @@
     */
     JSMocka = function(object, $block) {
 
+        if (!(this instanceof JSMocka)) {
+            return new JSMocka(object, $block);
+        }
+
         /**
         * @see JSMocka.Expectation
         */
@@ -104,6 +108,8 @@
             var contents = $block.toString().match(/^[^\{]*\{((.*\n*)*)\}/m)[1];
             new Function('api', 'with (this) { ' + contents + ' }').call(this);
         }
+
+        return this;
     };
 
     /**
