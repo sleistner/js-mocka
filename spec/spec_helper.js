@@ -6,6 +6,6 @@ Screw.Unit(function() {
 
     before(function() {
         object = {};
-        control = new JSMocka(object);
+        control = JSMocka(object);
     });
 });
