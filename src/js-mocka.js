@@ -55,7 +55,7 @@
         this.object = object;
 
         if (typeof $block === 'function') {
-            if (!(/^[^{]*?\{([^\x00]*)\}\s*$/).test($FtoString.call($block))) {
+            if (!(/^[^{]*?\{([^\x00]*)\}\s*$/).test($block.toString())) {
                 throw new Error("RegExp unable to parse the callback\n" + $block);
             }
             new Function('with (this) { ' + RegExp.$1 + ' }').call(this);
