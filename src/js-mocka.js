@@ -52,64 +52,71 @@
             return new JSMocka(object, $block);
         }
 
+        this.object = object;
+
+        if (typeof $block === 'function') {
+            var contents = $block.toString().match(/^[^\{]*\{((.*\n*)*)\}/m)[1];
+            new Function('with (this) { ' + contents + ' }').call(this);
+        }
+
+        return this;
+    };
+
+    JSMocka.prototype = /** @lends JSMocka.prototype */ {
+
         /**
         * @see JSMocka.Expectation
         */
-        this.stubs = function(method) {
+        stubs: function(method) {
             if (JSMocka.isString(method)) {
                 return this.expects(method).anyTime().setEvaluable(false);
             }
             return mockCollection(method, this, this.stubs);
-        };
+        },
 
         /**
         * Adds an expectation that a method identified by method must be called
         * exactly once with any parameters. Returns the new expectation which can be
         * further modified by methods on JSMocka.Expectation.
         * @see JSMocka.Expectation
+        * @retur {JSMocka}
         */
-        this.expects = function(method) {
+        expects: function(method) {
             if (JSMocka.isString(method)) {
-                onStubbing(object, method);
-                var expectation  = new JSMocka.Expectation(object, method);
+                onStubbing(this.object, method);
+                var expectation = new JSMocka.Expectation(this.object, method);
                 expectation.apply();
                 expectations.push(expectation);
                 return expectation;
             }
             return mockCollection(method, this, this.expects);
-        };
+        },
 
-        this.anyInstance = function() {
-            if (object.prototype) {
-                object = object.prototype;
+        anyInstance: function() {
+            if (this.object.prototype) {
+                this.object = this.object.prototype;
             }
             return this;
-        };
+        },
 
         /**
         * TODO: description
         * @see JSMocka.Configuration
         */
-        this.allow = function() {
-            JSMocka.Configuration.allow(JSMocka.toArray(arguments), object);
+        allow: function() {
+            JSMocka.Configuration.allow(JSMocka.toArray(arguments), this.object);
             return this;
-        };
+        },
 
         /**
         * TODO: description
         * @see JSMocka.Configuration
         */
-        this.prevent = function() {
-            JSMocka.Configuration.prevent(JSMocka.toArray(arguments), object);
+        prevent: function() {
+            JSMocka.Configuration.prevent(JSMocka.toArray(arguments), this.object);
             return this;
-        };
-
-        if (typeof $block === 'function') {
-            var contents = $block.toString().match(/^[^\{]*\{((.*\n*)*)\}/m)[1];
-            new Function('api', 'with (this) { ' + contents + ' }').call(this);
         }
 
-        return this;
     };
 
     /**
